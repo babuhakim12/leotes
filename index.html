@@ -5,61 +5,118 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- Premium Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    background: #f4f4f4;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    position: relative;
+    background-color: #111;
 }
 
+/* WATERMARK BACKGROUND */
+body::before {
+    content: "";
+    background: url("https://images.unsplash.com/photo-1474487548417-781cb71495f3") no-repeat center center/cover;
+    opacity: 0.12; /* watermark effect */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* HEADER */
 header {
-    background: #111;
-    color: white;
-    padding: 20px;
+    background: rgba(0,0,0,0.8);
+    padding: 60px 20px;
     text-align: center;
+    border-bottom: 4px solid #ffae00;
 }
 
+header h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 55px;
+    letter-spacing: 4px;
+    color: #ffae00;
+    margin: 0;
+}
+
+header p {
+    font-size: 20px;
+    color: #ddd;
+}
+
+/* SECTION */
 section {
-    padding: 20px;
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: auto;
 }
 
-h2 {
-    color: #222;
-    border-bottom: 2px solid orange;
-    padding-bottom: 5px;
+/* SECTION TITLE */
+.section-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 32px;
+    color: #ffae00;
+    margin-bottom: 30px;
+    border-left: 5px solid #ffae00;
+    padding-left: 10px;
 }
 
+/* CARD */
 .card {
-    background: white;
-    padding: 15px;
-    margin: 10px 0;
+    background: rgba(0,0,0,0.75);
+    padding: 25px;
+    margin-bottom: 25px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: 0.3s;
 }
 
+.card:hover {
+    background: rgba(0,0,0,0.9);
+    transform: translateY(-5px);
+}
+
+/* IMAGE */
 img {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 10px;
+    margin-top: 20px;
 }
 
+/* FOOTER */
 footer {
-    background: #111;
-    color: white;
+    background: rgba(0,0,0,0.9);
     text-align: center;
-    padding: 10px;
+    padding: 25px;
+    font-size: 14px;
+    color: #aaa;
+    border-top: 3px solid #ffae00;
 }
 
-/* WhatsApp Button */
+/* WHATSAPP */
 .whatsapp {
     position: fixed;
     bottom: 20px;
     right: 20px;
     background: #25D366;
     color: white;
-    padding: 12px 18px;
+    padding: 15px 20px;
     border-radius: 50px;
-    text-decoration: none;
     font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    header h1 { font-size: 35px; }
+    .section-title { font-size: 26px; }
 }
 </style>
 </head>
@@ -68,52 +125,44 @@ footer {
 
 <header>
 <h1>LEOTES</h1>
-<p>Construction | Government Tender | Railway Work</p>
+<p>Construction | Government Tender | Railway Infrastructure Work</p>
 </header>
 
 <section>
-<h2>About Us</h2>
-<p>LEOTES is a construction and government tender company based in Maligaon, Guwahati, Assam. We handle civil construction, railway contracts and government projects.</p>
+<h2 class="section-title">About Company</h2>
+<p>LEOTES is a professional construction and government tender company based in Maligaon, Guwahati, Assam. We specialize in civil construction, railway contracts, and infrastructure development projects.</p>
 </section>
 
 <section>
-<h2>Tender Projects</h2>
+<h2 class="section-title">Our Tender Projects</h2>
 
 <div class="card">
-<h3>Government Building Construction</h3>
-<p>Completed multiple public infrastructure projects under state government tenders.</p>
+<h3>Government Infrastructure Development</h3>
+<p>Execution of public sector construction projects under state and central government tenders.</p>
 </div>
 
 <div class="card">
-<h3>Road & Bridge Work</h3>
-<p>Executed road development and bridge construction works successfully.</p>
+<h3>Road & Bridge Engineering</h3>
+<p>High-quality road construction and bridge structural development with safety compliance.</p>
 </div>
 
 <div class="card">
-<h3>Railway Civil Work</h3>
-<p>Handled railway platform development and structural works.</p>
+<h3>Railway Civil & Structural Works</h3>
+<p>Platform construction, drainage systems, retaining walls, and railway infrastructure works.</p>
 </div>
-
-</section>
-
-<section>
-<h2>Railway Projects</h2>
-
-<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Railway Work">
 
 </section>
 
 <section>
-<h2>Office Address</h2>
-<p>Maligaon, Guwahati, Assam, India</p>
+<h2 class="section-title">Office Address</h2>
+<p>Maligaon Tiniali, Guwahati-11, India</p>
 </section>
 
 <footer>
 <p>© 2026 LEOTES | All Rights Reserved</p>
 </footer>
 
-<!-- WhatsApp Button -->
-<a class="whatsapp" href="https://wa.me/917002729361" target="_blank">
+<a class="whatsapp" href="https://wa.me/919072763669" target="_blank">
 Chat on WhatsApp
 </a>
 
