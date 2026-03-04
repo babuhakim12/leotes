@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>LEOTES | Construction & Government Tender Works</title>
+<title>LEOTES ENTERPRISE | Construction & Government Tender Works</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -30,27 +30,72 @@ body::before {
     z-index: -1;
 }
 
-/* HEADER */
+/* HEADER WITH BACKGROUND IMAGE */
 header {
-    background: rgba(0,0,0,0.8);
-    padding: 60px 20px;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url("https://images.unsplash.com/photo-1503387762-592deb58ef4e") no-repeat center center/cover;
+    padding: 100px 20px;
     text-align: center;
-    border-bottom: 4px solid #ffae00;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 2s ease-in-out;
 }
 
+/* Stylish Animated Title */
 header h1 {
     font-family: 'Oswald', sans-serif;
-    font-size: 55px;
-    letter-spacing: 4px;
-    color: #ffae00;
+    font-size: 70px;
+    letter-spacing: 6px;
     margin: 0;
+    background: linear-gradient(90deg, #00c6ff, #0072ff, #00c6ff);
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: shine 4s linear infinite, slideDown 1.5s ease;
 }
 
+/* Subtitle Animation */
 header p {
-    font-size: 20px;
+    font-size: 22px;
     color: #ddd;
+    margin-top: 15px;
+    animation: fadeUp 2s ease;
 }
 
+/* Animations */
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 /* SECTION */
 section {
     padding: 60px 20px;
@@ -103,18 +148,51 @@ footer {
     position: fixed;
     bottom: 80px;
     right: 20px;
-    background: #ffae00;
-    color: black;
-    padding: 15px 20px;
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    color: white;
+    padding: 15px 25px;
     border-radius: 50px;
     font-weight: bold;
     text-decoration: none;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    box-shadow: 0 0 15px rgba(0, 114, 255, 0.7);
+    animation: pulse 2s infinite;
+    transition: 0.3s ease;
+}
+
+.call-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(0, 198, 255, 1);
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0,114,255, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 20px rgba(0,114,255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0,114,255, 0);
+    }
 }
 /* RESPONSIVE */
 @media(max-width:768px){
     header h1 { font-size: 35px; }
     .section-title { font-size: 26px; }
+}
+.about-section {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeUpAbout 2s ease forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeUpAbout {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 </style>
 </head>
@@ -122,15 +200,14 @@ footer {
 <body>
 
 <header>
-<h1>LEOTES</h1>
+<h1>LEOTES ENTERPRISE</h1>
 <p>Construction | Government Tender | Railway Infrastructure Work</p>
 </header>
 
-<section>
+<section class="about-section">
 <h2 class="section-title">About Company</h2>
 <p>LEOTES is a professional construction and government tender company based in Maligaon, Guwahati, Assam. We specialize in civil construction, railway contracts, and infrastructure development projects.</p>
 </section>
-
 <section>
 <h2 class="section-title">Our Tender Projects</h2>
 
